@@ -37,7 +37,10 @@ public class JTime
         return transTime;
     }
 
-    //获取今天
+    /**
+     * 获取今天
+     * @return
+     */
     public static int getToday ()
     {
         Calendar calendar = Calendar.getInstance();
@@ -110,7 +113,12 @@ public class JTime
         return getTime(-1, FORMAT_DAY);
     }
 
-    //获取指定的日期,比如昨天 addDay=-1  明天 addDay=1
+    /**
+     * 获取指定的日期,比如昨天 addDay=-1  明天 addDay=1
+     * @param addDay
+     * @param format
+     * @return
+     */
     public static String getTime (int addDay, String format)
     {
         Calendar cal = Calendar.getInstance();
