@@ -39,6 +39,7 @@ public class JTime
 
     /**
      * 获取今天
+     *
      * @return
      */
     public static int getToday ()
@@ -115,6 +116,7 @@ public class JTime
 
     /**
      * 获取指定的日期,比如昨天 addDay=-1  明天 addDay=1
+     *
      * @param addDay
      * @param format
      * @return
