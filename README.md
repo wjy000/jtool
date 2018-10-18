@@ -2,7 +2,7 @@
 
 #### 项目介绍
 我的java/android通用类库
-集成nohttp,gons
+集成gons
 
 #### 软件架构
 软件架构说明
