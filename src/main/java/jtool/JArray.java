@@ -1,5 +1,6 @@
 package jtool;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -258,6 +259,105 @@ public class JArray
         else
             return Collections.emptyList();
 
+    }
+
+    /**
+     * 对象是否为数组对象
+     *
+     * @param obj 对象
+     * @return 是否为数组对象，如果为{@code null} 返回false
+     */
+    public static boolean isArray (Object obj)
+    {
+        if (null == obj)
+        {
+            // throw new NullPointerException("Object check for isArray is null");
+            return false;
+        }
+        return obj.getClass().isArray();
+    }
+
+    /**
+     * 数组或集合转String
+     *
+     * @param obj 集合或数组对象
+     * @return 数组字符串，与集合转字符串格式相同
+     */
+    public static String toString (Object obj)
+    {
+        if (null == obj)
+        {
+            return null;
+        }
+        if (isArray(obj))
+        {
+            try
+            {
+                return Arrays.deepToString((Object[]) obj);
+            } catch (Exception e)
+            {
+                final String className = obj.getClass().getComponentType().getName();
+                switch (className)
+                {
+                    case "long":
+                        return Arrays.toString((long[]) obj);
+                    case "int":
+                        return Arrays.toString((int[]) obj);
+                    case "short":
+                        return Arrays.toString((short[]) obj);
+                    case "char":
+                        return Arrays.toString((char[]) obj);
+                    case "byte":
+                        return Arrays.toString((byte[]) obj);
+                    case "boolean":
+                        return Arrays.toString((boolean[]) obj);
+                    case "float":
+                        return Arrays.toString((float[]) obj);
+                    case "double":
+                        return Arrays.toString((double[]) obj);
+                    default:
+                        throw new IllegalArgumentException(e);
+                }
+            }
+        }
+        return obj.toString();
+    }
+
+    /**
+     * 是否包含{@code null}元素
+     *
+     * @param <T>   数组元素类型
+     * @param array 被检查的数组
+     * @return 是否包含{@code null}元素
+     * @since 3.0.7
+     */
+    @SuppressWarnings("unchecked")
+    public static <T> boolean hasNull (T... array)
+    {
+        if (isNotEmpty(array))
+        {
+            for (T element : array)
+            {
+                if (null == element)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 数组是否为非空
+     *
+     * @param <T>   数组元素类型
+     * @param array 数组
+     * @return 是否为非空
+     */
+    @SuppressWarnings("unchecked")
+    public static <T> boolean isNotEmpty (final T... array)
+    {
+        return (array != null && array.length != 0);
     }
 }
 

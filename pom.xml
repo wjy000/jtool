@@ -94,6 +94,9 @@
                         <goals>
                             <goal>jar</goal><!--执行goal时，完成doc附加-->
                         </goals>
+                        <configuration>
+                            <additionalparam>-Xdoclint:none</additionalparam>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
