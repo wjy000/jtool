@@ -232,35 +232,18 @@ public class JArray
     /**
      * 转换为array
      *
-     * @return list=null 则返回null
+     * @param list
+     * @param <T>
+     * @return
      */
-    public static String[] toArrayS (List<String> list)
+    public static <T> T[] toArray (List<T> list, T[] arrays)
     {
         if (list != null)
-        {
-            String[] arrays = new String[list.size()];
-            for (int i = 0; i < list.size(); i++)
-            {
-                arrays[i] = list.get(i);
-            }
+            return list.toArray(arrays);
+        else
             return arrays;
-        } else
-            return null;
     }
 
-    public static int[] toArrayI (List<Integer> list)
-    {
-        if (list != null)
-        {
-            int[] arrays = new int[list.size()];
-            for (int i = 0; i < list.size(); i++)
-            {
-                arrays[i] = list.get(i);
-            }
-            return arrays;
-        } else
-            return null;
-    }
 
     /**
      * array 转 List
