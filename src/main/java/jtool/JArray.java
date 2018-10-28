@@ -352,6 +352,17 @@ public class JArray
      * 数组是否为非空
      *
      * @param <T>   数组元素类型
+     * @return 是否为非空
+     */
+    public static <T> boolean isNotEmpty (List<T> list)
+    {
+        return (list != null && list.size() != 0);
+    }
+
+    /**
+     * 数组是否为非空
+     *
+     * @param <T>   数组元素类型
      * @param array 数组
      * @return 是否为非空
      */
