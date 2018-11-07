@@ -509,24 +509,31 @@ public class JString
      * 将对象转为字符串<br>
      * 1、Byte数组和ByteBuffer会被转换为对应字符串的数组 2、对象数组会调用Arrays.toString方法
      *
-     * @param obj 对象
+     * @param obj     对象
      * @param charset 字符集
      * @return 字符串
      */
-    public static String str(Object obj, Charset charset) {
-        if (null == obj) {
+    public static String str (Object obj, Charset charset)
+    {
+        if (null == obj)
+        {
             return null;
         }
 
-        if (obj instanceof String) {
+        if (obj instanceof String)
+        {
             return (String) obj;
-        } else if (obj instanceof byte[]) {
+        } else if (obj instanceof byte[])
+        {
             return str((byte[]) obj, charset);
-        } else if (obj instanceof Byte[]) {
+        } else if (obj instanceof Byte[])
+        {
             return str((Byte[]) obj, charset);
-        } else if (obj instanceof ByteBuffer) {
+        } else if (obj instanceof ByteBuffer)
+        {
             return str((ByteBuffer) obj, charset);
-        } else if (JArray.isArray(obj)) {
+        } else if (JArray.isArray(obj))
+        {
             return JArray.toString(obj);
         }
 
@@ -603,5 +610,64 @@ public class JString
         sbuf.append(strPattern, handledPosition, strPattern.length());
 
         return sbuf.toString();
+    }
+
+    public static double toDouble (String num)
+    {
+        return toDouble(num, 0);
+    }
+
+    public static double toDouble (String num, double def)
+    {
+        try
+        {
+            return Double.parseDouble(num);
+        } catch (Throwable e)
+        {
+            return def;
+        }
+    }
+
+    public static float toFloat (String num)
+    {
+        return toFloat(num, 0);
+    }
+
+    public static float toFloat (String num, float def)
+    {
+        try
+        {
+            return Float.parseFloat(num);
+        } catch (Throwable e)
+        {
+            return def;
+        }
+    }
+
+    public static int toInt (String num)
+    {
+        return toInt(num, 0);
+    }
+
+    public static int toInt (String num, int def)
+    {
+        try
+        {
+            return Integer.parseInt(num);
+        } catch (Throwable e)
+        {
+            return def;
+        }
+    }
+
+    public static boolean toBoolean (String num, boolean def)
+    {
+        try
+        {
+            return Boolean.parseBoolean(num);
+        } catch (Throwable e)
+        {
+            return def;
+        }
     }
 }
