@@ -21,7 +21,8 @@ public class TransTime
             builder.append(hours + "时");
         if (minutes > 0)
             builder.append(minutes + "分");
-        builder.append(seconds + "秒");
+        if (seconds > 0)
+            builder.append(seconds + "秒");
         return builder.toString();
     }
 }
