@@ -660,6 +660,22 @@ public class JString
         }
     }
 
+    public static long toLong (String num)
+    {
+        return toLong(num, 0);
+    }
+
+    public static long toLong (String num, long def)
+    {
+        try
+        {
+            return Long.parseLong(num);
+        } catch (Throwable e)
+        {
+            return def;
+        }
+    }
+
     public static boolean toBoolean (String num, boolean def)
     {
         try
