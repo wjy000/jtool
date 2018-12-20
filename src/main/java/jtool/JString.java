@@ -653,7 +653,7 @@ public class JString
     {
         try
         {
-            return Integer.parseInt(num);
+            return (int) Double.parseDouble(num);
         } catch (Throwable e)
         {
             return def;
@@ -686,4 +686,5 @@ public class JString
             return def;
         }
     }
+
 }
