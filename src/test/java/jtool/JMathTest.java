@@ -33,13 +33,7 @@ class JMathTest {
 
     @Test
     void decimalScale() {
-        System.out.println(JMath.decimalScale(4.7, 1, RoundingMode.UP).doubleValue());
-        System.out.println(JMath.decimalScale(4.7, 0, RoundingMode.UP).doubleValue());
-        System.out.println(JMath.decimalScale(4.123, 1, RoundingMode.UP).doubleValue());
-        System.out.println(JMath.decimalScale(4.123, 2, RoundingMode.UP).doubleValue());
-        System.out.println(JMath.decimalScale(4.123, 3, RoundingMode.UP).doubleValue());
-        System.out.println(JMath.decimalScale(4.883, 1, RoundingMode.UP).doubleValue());
-        System.out.println(JMath.decimalScale(4.883, 2, RoundingMode.UP).doubleValue());
-        System.out.println(JMath.decimalScale(4.883, 3, RoundingMode.UP).doubleValue());
+        long price_fen = (long) (JString.toFloat(4.7+"") * 100);
+        System.out.println(price_fen);
     }
 }

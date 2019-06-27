@@ -628,11 +628,23 @@ public class JString
         }
     }
 
+    /**
+     * @see JString#toFloat(String, float)
+     * @param num
+     * @return
+     */
+    @Deprecated
     public static float toFloat (String num)
     {
         return toFloat(num, 0);
     }
-
+    /**
+     * long price_fen = (long) (JString.toFloat(4.7+"") * 100);
+     * 输出price_fen等于169 这种奇怪到问题，因此建议使用toDouble
+     * @param num
+     * @return
+     */
+    @Deprecated
     public static float toFloat (String num, float def)
     {
         try
