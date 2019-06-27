@@ -590,4 +590,5 @@ public class JFile
         return new String(resultCharArray);
     }
 
+
 }

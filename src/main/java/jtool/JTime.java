@@ -14,6 +14,7 @@ import jtool.entity.TransTime;
 public class JTime
 {
     public static final String FORMAT_SS = "yyyy-MM-dd HH:mm:ss";
+    public static final String FORMAT_SS_SSS = "yyyy-MM-dd HH:mm:ss:SSS";
     public static final String FORMAT_DAY = "yyyy-MM-dd";
     private static final SimpleDateFormat SI_FORMAT_SS = new SimpleDateFormat(FORMAT_SS);
 

@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="jtool" />
-      </profile>
-    </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="android" target="1.8" />
+      <module name="hutool-log" target="1.8" />
+      <module name="jlog" target="1.8" />
       <module name="jtool" target="1.8" />
+      <module name="log" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
