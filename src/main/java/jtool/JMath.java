@@ -45,7 +45,7 @@ public class JMath {
     }
 
     /**
-     * 保留x位小数
+     * 保留x位小数,BigDecimal原函数有个缺陷，例如4.7保留一位小数会变为4.8,这里会避免这个问题
      *
      * @param num   数字
      * @param scale 小数位数
@@ -53,8 +53,15 @@ public class JMath {
      * @return
      */
     public static BigDecimal decimalScale(double num, int scale, RoundingMode mode) {
-        BigDecimal bigDecimal = new BigDecimal(num).setScale(scale, mode);
-        return bigDecimal;
+        String numStr = num + "";
+        String[] strings = numStr.split("\\.");
+        if (strings.length == 2) {
+            if (strings[1].length() > scale) {
+                BigDecimal bigDecimal = new BigDecimal(num).setScale(scale, mode);
+                return bigDecimal;
+            }
+        }
+        return new BigDecimal(num);
     }
 
 
