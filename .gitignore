@@ -31,3 +31,4 @@ target
 /build
 /captures
 .externalNativeBuild
+/.idea
