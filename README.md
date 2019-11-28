@@ -1,7 +1,8 @@
 # jtool
 
 #### 项目介绍
-我的java类库
+- 我的java/android通用类库
+- 集成gson
 
 #### 软件架构
 软件架构说明
