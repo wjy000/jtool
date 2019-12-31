@@ -18,7 +18,7 @@
         <repository>
             <id>nexus-public</id>
             <name>Nexus Public</name>
-            <url>http://home.javaer.xyz:8081/repository/maven-public/</url>
+            <url>http://nexus.javaer.xyz/repository/maven-public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -31,7 +31,7 @@
         <pluginRepository>
             <id>nexus</id>
             <name>local private nexus</name>
-            <url>http://home.javaer.xyz:8081/repository/maven-public/</url>
+            <url>http://nexus.javaer.xyz/repository/maven-public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -44,12 +44,12 @@
         <repository>
             <id>releases</id>
             <name>Nexus Release Repository</name>
-            <url>http://home.javaer.xyz:8081/repository/maven-releases/</url>
+            <url>http://nexus.javaer.xyz/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
             <name>Nexus Snapshot Repository</name>
-            <url>http://home.javaer.xyz:8081/repository/maven-snapshots/</url>
+            <url>http://nexus.javaer.xyz/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
     <dependencies>
@@ -68,7 +68,7 @@
         <dependency>
             <groupId>com.jfinal</groupId>
             <artifactId>jfinal</artifactId>
-            <version>4.2</version>
+            <version>4.8</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
