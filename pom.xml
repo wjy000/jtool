@@ -7,7 +7,7 @@
     <groupId>wjy</groupId>
     <artifactId>jtool</artifactId>
     <packaging>jar</packaging>
-    <version>1.3.3</version>
+    <version>1.3.4</version>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -56,7 +56,7 @@
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.8.5</version>
+            <version>2.8.6</version>
             <optional>true</optional>
         </dependency>
         <dependency>
