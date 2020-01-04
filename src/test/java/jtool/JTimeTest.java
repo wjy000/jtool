@@ -20,7 +20,7 @@ class JTimeTest
     @org.junit.jupiter.api.Test
     void transTime ()
     {
-        TransTime transTime = JTime.transTime(28234729);
+        TransTime transTime = JTime.transTime(-776710694);
         System.out.println(transTime.toString());
     }
 }

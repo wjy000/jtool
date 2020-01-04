@@ -15,13 +15,13 @@ public class TransTime
     public String toString ()
     {
         StringBuilder builder = new StringBuilder();
-        if (days > 0)
+        if (days != 0)
             builder.append(days + "天");
-        if (hours > 0)
+        if (hours != 0)
             builder.append(hours + "时");
-        if (minutes > 0)
+        if (minutes != 0)
             builder.append(minutes + "分");
-        if (seconds > 0)
+        if (seconds != 0)
             builder.append(seconds + "秒");
         return builder.toString();
     }
