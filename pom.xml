@@ -10,9 +10,6 @@
     <version>1.4</version>
     <properties>
         <jdk>11</jdk>
-        <maven.compiler.source>${jdk}</maven.compiler.source>
-        <maven.compiler.target>${jdk}</maven.compiler.target>
-        <maven.compiler.compilerVersion>${jdk}</maven.compiler.compilerVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <repositories>
@@ -77,15 +74,27 @@
             <version>2.5</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.2.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.1.2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
                 <configuration>
-                    <release>${jdk}</release>
+                    <source>${jdk}</source>
+                    <target>${jdk}</target>
                 </configuration>
             </plugin>
             <!-- 生成源码jar -->
