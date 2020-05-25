@@ -7,7 +7,7 @@
     <groupId>wjy</groupId>
     <artifactId>jtool</artifactId>
     <packaging>jar</packaging>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
     <properties>
         <jdk>8</jdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

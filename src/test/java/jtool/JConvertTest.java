@@ -19,6 +19,9 @@ class JConvertTest {
         System.out.println(d);
     }
 
+    /**
+     * 注释
+     */
     @Test
     void toFloat() {
         System.out.println(JConvert.toFloat(1.51d));
