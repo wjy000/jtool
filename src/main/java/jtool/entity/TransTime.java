@@ -23,6 +23,11 @@ public class TransTime
             builder.append(minutes + "分");
         if (seconds != 0)
             builder.append(seconds + "秒");
-        return builder.toString();
+        String s = builder.toString();
+        if(s.startsWith("-")){
+            s = s.replace("-", "");
+            s="-"+s;
+        }
+        return s;
     }
 }

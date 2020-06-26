@@ -2,8 +2,6 @@ package jtool;
 
 import jtool.entity.TransTime;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class JTimeTest
 {
 
@@ -20,7 +18,9 @@ class JTimeTest
     @org.junit.jupiter.api.Test
     void transTime ()
     {
-        TransTime transTime = JTime.transTime(-776710694);
+        TransTime transTime = JTime.transTime(776710694);
+        TransTime transTime1 = JTime.transTime(-776710694);
         System.out.println(transTime.toString());
+        System.out.println(transTime1.toString());
     }
 }
