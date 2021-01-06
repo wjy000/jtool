@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 public class 刷6v {
     @Test
     public void test() {
-
         for (int j = 0; j < 10; j++) {
             JExecutor.execute(() -> {
                 HttpRequest request = HttpUtil.createGet("http://www.hao6v.com/e/enews/?enews=AddInfoPfen&classid=32&id=34569&doajax=1&ajaxarea=showpf&fen=1");
